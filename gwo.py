@@ -19,6 +19,7 @@ def GWO(objf, wolf_count, iters):
     convergence = []
 
     for iter in range(iters):
+        # find positions of alpha, beta and delta
         for i in range(wolf_count):
             wolves[i, :] = np.clip(wolves[i, :], lower_bound, upper_bound)
 
