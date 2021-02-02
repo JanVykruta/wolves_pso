@@ -36,7 +36,7 @@ def GWO(objf, wolf_count, iters):
 
         a = 2 - iter * (2 / iters)
 
-        def get_X_for(pos):
+        def get_W_for(pos):
             r1 = np.random.uniform(size=(wolf_count, dim))
             r2 = np.random.uniform(size=(wolf_count, dim))
 
@@ -47,11 +47,11 @@ def GWO(objf, wolf_count, iters):
 
             return pos - A * D
 
-        X1 = get_X_for(alpha_pos)
-        X2 = get_X_for(beta_pos)
-        X3 = get_X_for(delta_pos)
+        W_alpha = get_W_for(alpha_pos)
+        W_beta = get_W_for(beta_pos)
+        W_delta = get_W_for(delta_pos)
 
-        wolves = (X1 + X2 + X3) / 3
+        wolves = (W_alpha + W_beta + W_delta) / 3
 
         convergence.append(alpha)
 

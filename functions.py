@@ -33,3 +33,6 @@ def F11():
         return np.sum(x ** 2) / 4000 - np.prod(np.cos(x / np.sqrt(w))) + 1
 
     return {'dim': dim, 'low': -600, 'high': 600, 'opt': 0, 'fnc': f, 'name': 'F11'}
+
+
+FUNCTIONS = [F1, F2, F7, F11]
